@@ -63,13 +63,13 @@ public class ViewCapaProcesso extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Coloque os numeros dos Processos");
 
-        jLabel4.setText("PosiÃ§Ã£o 1:");
+        jLabel4.setText("Posição 1:");
 
-        jLabel5.setText("PosiÃ§Ã£o 2:");
+        jLabel5.setText("Posição 2:");
 
-        jLabel6.setText("PosiÃ§Ã£o 3:");
+        jLabel6.setText("Posição 3:");
 
-        jLabel7.setText("PosiÃ§Ã£o 4:");
+        jLabel7.setText("Posição 4:");
 
         jTextPosicao1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
