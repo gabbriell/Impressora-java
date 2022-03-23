@@ -1,6 +1,7 @@
 package helper;
 
 
+import dao.ImpressoraDAO;
 import impressora.Impressao;
 import view.ViewCapaProcesso;
 
@@ -30,8 +31,7 @@ public class ImpressoraHelper implements IHelper {
         
         pagina = new Impressao(posicao1);
         return pagina;
-    }
-        
+    }     
         
 
     @Override

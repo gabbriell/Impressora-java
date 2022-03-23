@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.text.View;
 import model.ImpressoraModel;
 
 
@@ -26,12 +27,12 @@ public class ImpressoraDAO {
         this.connection = connection;
     }
     
-    public void insert(Impressao impressora) throws SQLException{
+    public void select(String impressora) throws SQLException{
               
-            String sql = "SELECT * FROM `capa_de_processo` WHERE numero_processo = "++";
+           // String sql = "SELECT * FROM `capa_de_processo` WHERE numero_processo = "++";
             
-            PreparedStatement statement = connection.prepareStatement(sql);
-            statement.execute();      
+           // PreparedStatement statement = connection.prepareStatement(sql);
+           // statement.execute();      
         }
     
         

@@ -1,5 +1,7 @@
 package controller;
 
+import dao.ConexaoDAO;
+import dao.ImpressoraDAO;
 import helper.ImpressoraHelper;
 import impressora.Impressao;
 import java.awt.Desktop;
@@ -7,6 +9,7 @@ import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.print.Doc;
@@ -38,6 +41,8 @@ public class ImpressoraController {
     private ImpressoraHelper helper;
     private Impressao impressora;
     private DocAttributeSet hasDoc;
+    private ImpressoraDAO impressoraDao;
+    private ConexaoDAO conexao;
 
     public ImpressoraController(ViewCapaProcesso view) {
         this.view = view;
@@ -45,9 +50,13 @@ public class ImpressoraController {
         
     }
     
-    public void imprimirCapa() throws FileNotFoundException{
+    public void imprimirCapa() throws FileNotFoundException, SQLException{
         
+        String conteudo1 = impressora.getConteudo1();
+              
         impressora = helper.obterModelo();
+        impressoraDao.select(conteudo1);
+        
         JOptionPane.showMessageDialog(view,"Imprimindo: " + impressora.getConteudo1());
              
        

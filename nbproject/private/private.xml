@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/operador/Documents/NetBeansProjects/Impressora/src/impressora/Impressao.java</file>
+            <file>file:/C:/Users/operador/Documents/NetBeansProjects/Impressora/src/helper/ImpressoraHelper.java</file>
+            <file>file:/C:/Users/operador/Documents/NetBeansProjects/Impressora/src/dao/ImpressoraDAO.java</file>
+            <file>file:/C:/Users/operador/Documents/NetBeansProjects/Impressora/src/helper/IHelper.java</file>
+            <file>file:/C:/Users/operador/Documents/NetBeansProjects/Impressora/src/view/ViewCapaProcesso.java</file>
+            <file>file:/C:/Users/operador/Documents/NetBeansProjects/Impressora/src/controller/ImpressoraController.java</file>
+        </group>
     </open-files>
 </project-private>
