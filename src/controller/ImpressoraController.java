@@ -1,5 +1,7 @@
 package controller;
 
+import dao.ConexaoDAO;
+import dao.ImpressoraDAO;
 import helper.ImpressoraHelper;
 import impressora.Impressao;
 import java.awt.Desktop;
@@ -7,6 +9,9 @@ import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.print.Doc;
@@ -38,17 +43,27 @@ public class ImpressoraController {
     private ImpressoraHelper helper;
     private Impressao impressora;
     private DocAttributeSet hasDoc;
+    private ImpressoraDAO impressoraDAO;
+    private ConexaoDAO conexao;
+    private Connection connection;
 
     public ImpressoraController(ViewCapaProcesso view) {
         this.view = view;
         this.helper = new ImpressoraHelper(view);
         
+        
     }
     
-    public void imprimirCapa() throws FileNotFoundException{
-        
+    public void imprimirCapa() throws FileNotFoundException, SQLException{
+        ArrayList<String> processo = new ArrayList();
         impressora = helper.obterModelo();
-        JOptionPane.showMessageDialog(view,"Imprimindo: " + impressora.getConteudo1());
+        JOptionPane.showMessageDialog(view,"passei aqui " );
+        connection = new ConexaoDAO().getConnection();
+        impressoraDAO = new ImpressoraDAO(connection);
+        JOptionPane.showMessageDialog(view,"conectei com o banco " + impressora.getConteudo1());
+        processo = impressoraDAO.select(impressora.getConteudo1());
+        
+        JOptionPane.showMessageDialog(view,"Imprimindo processo Nº: " + processo.get(0));
              
        
         PrintService[] printService = PrintServiceLookup.lookupPrintServices(DocFlavor.INPUT_STREAM.AUTOSENSE,null);

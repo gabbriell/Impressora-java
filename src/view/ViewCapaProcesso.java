@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import controller.ImpressoraController;
+import java.sql.SQLException;
 import javax.swing.JTextField;
 
 /*
@@ -63,13 +64,13 @@ public class ViewCapaProcesso extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Coloque os numeros dos Processos");
 
-        jLabel4.setText("Posição 1:");
+        jLabel4.setText("Posiï¿½ï¿½o 1:");
 
-        jLabel5.setText("Posição 2:");
+        jLabel5.setText("Posiï¿½ï¿½o 2:");
 
-        jLabel6.setText("Posição 3:");
+        jLabel6.setText("Posiï¿½ï¿½o 3:");
 
-        jLabel7.setText("Posição 4:");
+        jLabel7.setText("Posiï¿½ï¿½o 4:");
 
         jTextPosicao1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,6 +185,8 @@ public class ViewCapaProcesso extends javax.swing.JFrame {
             
             // imprimirCupom();
         } catch (FileNotFoundException ex) {
+            Logger.getLogger(ViewCapaProcesso.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
             Logger.getLogger(ViewCapaProcesso.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButtonImprimirActionPerformed
