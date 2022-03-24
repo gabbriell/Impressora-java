@@ -12,7 +12,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+<<<<<<< HEAD
 import javax.swing.JOptionPane;
+=======
+import javax.swing.text.View;
+>>>>>>> e20416fd15dbb4c72e94afb8594711b6dcbb3dd7
 import model.ImpressoraModel;
 
 
@@ -29,6 +33,7 @@ public class ImpressoraDAO {
         this.connection = connection;
     }
     
+<<<<<<< HEAD
     public ArrayList<String> select(String posicao1) throws SQLException{
             ArrayList<String> processo = new ArrayList();  
             String sql = "SELECT * FROM `capa_de_processo` WHERE numero_processo = ?";            
@@ -52,6 +57,14 @@ public class ImpressoraDAO {
            }
         return processo;
             
+=======
+    public void select(String impressora) throws SQLException{
+              
+           // String sql = "SELECT * FROM `capa_de_processo` WHERE numero_processo = "++";
+            
+           // PreparedStatement statement = connection.prepareStatement(sql);
+           // statement.execute();      
+>>>>>>> e20416fd15dbb4c72e94afb8594711b6dcbb3dd7
         }
         
 }
